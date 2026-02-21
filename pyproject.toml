@@ -1,0 +1,64 @@
+[project]
+name = "trade-republic"
+version = "0.1.0"
+license = {text = "MIT"}
+description = "Unofficial Python SDK for Trade Republic API - account management, portfolio tracking, order placement, and market data"
+keywords = ["trade-republic", "trading", "api", "sdk", "finance", "stocks", "investment"]
+readme = "README.md"
+requires-python = ">=3.13"
+
+authors = [
+    { name = "Rémi M", email = "contact@erim.fr" },
+]
+maintainers = [
+    { name = "Rémi M", email = "contact@erim.fr" }
+]
+
+dependencies = [
+    "loguru>=0.7.3",
+    "pandas>=2.3.3",
+    "python-dotenv>=1.2.1",
+    "requests>=2.32.5",
+    "websockets>=15.0.1",
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+homepage = "https://github.com/erim32/trade-republic"
+repository = "https://github.com/erim32/trade-republic"
+"Bug Tracker" = "https://github.com/erim32/trade-republic/issues"
+
+[dependency-groups]
+dev = [
+    "ruff==0.15.0",
+    "ty>=0.0.16",
+    "pre-commit>=4.5.1",
+    "pytest>=8.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+trade_republic = ["py.typed"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
