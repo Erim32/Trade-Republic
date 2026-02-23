@@ -19,7 +19,7 @@ class MarketDataService(TRAbstractService):
         :param isin: ISIN code of the instrument.
         :param exchange: Exchange code.
         """
-
+        data: dict | None = None
         try:
             data: dict | None = await self.api.get_ticker(isin, exchange)
 

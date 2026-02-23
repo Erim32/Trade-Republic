@@ -35,6 +35,9 @@ async def main():
         isin = instrument.get("isin")
         if isin:
             try:
+                print(
+                    f"Fetching instrument details for ISIN: {isin} ({len(enriched_instruments) + 1}/{len(instruments)})"
+                )
                 instrument_info = await instrument_service.fetch_instrument(isin)
                 instrument["instrument_info"] = instrument_info
             except Exception as e:

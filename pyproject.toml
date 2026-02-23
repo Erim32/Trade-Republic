@@ -1,6 +1,6 @@
 [project]
 name = "trade-republic"
-version = "0.1.0"
+version = "0.1.1"
 license = {text = "MIT"}
 description = "Unofficial Python SDK for Trade Republic API - account management, portfolio tracking, order placement, and market data"
 keywords = ["trade-republic", "trading", "api", "sdk", "finance", "stocks", "investment"]
@@ -47,8 +47,8 @@ dev = [
 ]
 
 [build-system]
-requires = ["setuptools>=70", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["uv_build>=0.10.4,<0.11.0", ]
+build-backend = "uv_build"
 
 [tool.setuptools.packages.find]
 where = ["src"]
