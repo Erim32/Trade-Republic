@@ -1,6 +1,6 @@
 [project]
 name = "trade-republic"
-version = "0.0.1"
+version = "0.0.2"
 license = {text = "MIT"}
 description = "Unofficial Python SDK for Trade Republic API - account management, portfolio tracking, order placement, and market data"
 keywords = ["trade-republic", "trading", "api", "sdk", "finance", "stocks", "investment"]
